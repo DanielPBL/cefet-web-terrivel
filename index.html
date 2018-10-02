@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Formulário Terrível</title>
+  </head>
+  <body>
+      <form action="http://terrivel.herokuapp.com/monster">
+        <fieldset>
+          <legend>Monstrinho</legend>
+          <div>
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text" required/>
+          </div>
+          <div>
+            <label for="num_pedras">Nº de pedras:</label>
+            <input name="num_pedras" type="number" min="0" required/>
+          </div>
+        <div>
+          <label for="tam_pedras">Tamanho das pedras:</label>
+          <input name="tam_pedras" type="number" min="1" max="7" value="3" step="0.5"/>
+        </div>
+        <div>
+          <label for=corCeu1">Cor do céu:</label>
+          <input name="corCeu1" type="color"/>
+        </div>
+        <div>
+          <label for="corCeu2">Cor do céu 2:</label>
+          <input name="corCeu2" type="color"/>
+        </div>
+        <div>
+          <label for="tipo_pedras">Tipo de pedra:</label>
+          <select name="tipo_pedras">
+            <option value="marroada">Marroada</option>
+            <option value="ametista">Ametista</option>
+            <option value="topazio">Topazio</option>
+            <option value="espinela">Espinela</option>
+          </select>
+        </div>
+        <div>
+          <label>
+            <input id="pedras_sortidas" type="checkbox"/>Pedras sortidas
+          </label>
+        </div>
+        </fieldset>
+        <input type="hidden" name="tipo_pedras_sortidas"/>
+        <label>Método
+          <select id="metodo">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+          </select>
+        </label>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </form>
+      <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- http://terrivel.herokuapp.com/monster -->

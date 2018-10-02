@@ -1,0 +1,20 @@
+form {
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+
+fieldset div {
+    display: table-row;
+}
+
+fieldset input,
+fieldset label {
+  display: table-cell;
+  margin: 5px;
+}
+
+button {
+    margin-top: 5px;
+    margin-right: 5px;
+}
